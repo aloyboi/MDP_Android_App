@@ -15,9 +15,22 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static Grid grid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //grid = findViewById(R.id.grid);
+
+        grid = findViewById(R.id.grid);
+
+        //Grid grid = new Grid(this);
+
+
+        setContentView(R.layout.activity_main);
+
+        /*
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -29,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        }); */
     }
 
     @Override
