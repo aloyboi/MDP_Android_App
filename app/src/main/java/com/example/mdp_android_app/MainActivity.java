@@ -1,5 +1,6 @@
 package com.example.mdp_android_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,10 +13,13 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
     public static Grid grid;
+    private Button buttonbluetooth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +31,26 @@ public class MainActivity extends AppCompatActivity {
 
         //Grid grid = new Grid(this);
 
+        buttonbluetooth = (Button) findViewById(R.id.buttonbluetooth);
+        buttonbluetooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBluetoothpage();
+            }
+        });
 
-        setContentView(R.layout.activity_main);
 
-        /*
+        }
+        public void openBluetoothpage() {
+            Intent intentBT = new Intent(this, Bluetoothpage.class);
+            startActivity(intentBT);
+        }
+
+
+
+    /*setContentView(R.layout.activity_main);
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         }); */
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

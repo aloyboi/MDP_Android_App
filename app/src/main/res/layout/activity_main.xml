@@ -22,6 +22,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/buttonbluetooth"
+            android:layout_width="136dp"
+            android:layout_height="39dp"
+            android:text="Bluetooth"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="259dp"
+            tools:layout_editor_absoluteY="11dp" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
